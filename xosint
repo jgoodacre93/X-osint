@@ -1613,7 +1613,7 @@ elif option == "15":
 			except ConnectionRefusedError:
 				print("{} Connection refused by host {}. It don't seem to be vunlerable to mail spoofing on port {} \033[0;37m \n".format(BLUE,target,port))
 			except Exception:
-				print("{} Exception Occured on host {}. It don't seem to be vunlerable to mail spoofing on port {} \033[0;37m \n".format(BLUE,target,port))
+				print("{} Exception occurred on host {}. It don't seem to be vunlerable to mail spoofing on port {} \033[0;37m \n".format(BLUE,target,port))
 			except KeyboardInterrupt:
 				print("Stopping...")
 				exit()
@@ -1634,7 +1634,7 @@ elif option == "15":
 			else:
 				print("{} The SMTP Server Targeted: {} don't seem to be vulberable to user enumeration on port {}. VRFY query responded statys : {}  \033[0;37m \n".format(BLUE,target,port,verify[0]))
 		except Exception:
-			print("{} Exception Occured on host {}. It don't seem to be vunlerable to user enumeration on port {}. \033[0;37m \n".format(BLUE,target,port))
+			print("{} Exception occurred on host {}. It don't seem to be vunlerable to user enumeration on port {}. \033[0;37m \n".format(BLUE,target,port))
 		except KeyboardInterrupt:
 			print("Stopping...")
 			exit()
@@ -1678,7 +1678,7 @@ elif option == "16":
                 return data
             
             except requests.exceptions.RequestException as e:
-                print(f"[!] An Error Occured: {e}")
+                print(f"[!] An Error occurred: {e}")
                 return None
             
         result = search_by_email(email_answer) # type: ignore
@@ -1702,7 +1702,7 @@ elif option == "16":
                 data = response.json()
                 return data
             except requests.exceptions.RequestException as e:
-                print(f"[!] An Error Occured: {e}")
+                print(f"[!] An Error occurred: {e}")
                 return None
         
         result2 = search_by_domain(domain_answer)
@@ -1727,7 +1727,7 @@ elif option == "16":
                 data = response.json()
                 return data
             except requests.exceptions.RequestException as e:
-                print(f"[!] An Error Occured: {e}")
+                print(f"[!] An Error occurred: {e}")
                 return None
         
         result3 = search_by_domain(username_answer)
